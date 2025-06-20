@@ -92,8 +92,8 @@ nav a:active {
 
 .cards {
   display: flex;
-  flex-direction: column; /* Cards empilhados em telas menores */
-  gap: 20px; /* Espaço entre os cards */
+  flex-direction: column; 
+  gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
@@ -101,24 +101,24 @@ nav a:active {
 
 .card {
   display: flex;
-  flex-direction: row; /* Imagem e texto lado a lado */
-  gap: 20px; /* Espaço entre imagem e texto */
-  background-color: #f9f9f9; /* Fundo leve para destaque */
-  border: 1px solid #ddd; /* Borda leve */
-  border-radius: 8px; /* Cantos arredondados */
-  overflow: hidden; /* Garante que bordas sejam respeitadas */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  flex-direction: row; 
+  gap: 20px; 
+  background-color: #f9f9f9; 
+  border: 1px solid #ddd; 
+  border-radius: 8px; 
+  overflow: hidden; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .card-image {
-  flex: 1; /* Ocupa uma fração proporcional */
-  max-width: 40%; /* Limita a largura da imagem */
-  object-fit: cover; /* Ajusta a imagem dentro do contêiner */
+  flex: 1; 
+  max-width: 40%; 
+  object-fit: cover; 
 }
 
 .card-text {
-  flex: 2; /* Texto ocupa mais espaço */
-  padding: 20px; /* Espaço interno para o texto */
+  flex: 2; 
+  padding: 20px; 
 }
 
 .card-text h3 {
@@ -131,18 +131,159 @@ nav a:active {
   font-size: 1rem;
   color: #666;
   line-height: 1.5;
+  text-align: justify;
+}
+
+.carousel {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-track-container {
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card {
+  flex: 0 0 100%; 
+  text-align: center;
+  padding: 10px;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+.carousel-button:focus {
+  outline: none;
 }
 
 
-footer p {
-    color: #000000;
+.footer {
+  background-color: #000000; 
+  color: #878792; 
+  padding: 20px 0;
+  border-top: 1px solid #ddd; 
+  font-size: 0.9rem; 
 }
 
-footer {
+.footer-content {
+  max-width: 1200px; 
+  margin: 0 auto; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  padding: 0 20px;
+}
+
+.footer-left,
+.footer-right {
+  display: flex;
+}
+
+.footer-left p,
+.footer-right p {
+  margin: 0; 
+}
+
+.footer-right p a {
+  color: #0056b3;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+
+.footer-right p a:hover {
+  color: #002d7f; 
+}
+
+@media (max-width: 768px) {
+
+  .hero {
     text-align: center;
-    padding: 2rem;
-    margin-top: 4rem;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-    color: #ffffff;
-}
+    height: 600px;;
+  }
 
+  .hero h1 {
+    font-size: 3rem;
+    margin-left: 50px;
+    padding-right: 30px;
+  }
+
+  nav a {
+    font-size: small;
+    font-weight: bold;
+    margin-right: auto;
+  }
+
+  .logo img {
+    max-width: 70px;
+    height: auto;
+    width: auto;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .cards {
+    grid-template-columns: 1fr; 
+    gap: 10px; 
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    align-items: center;
+  }
+
+  .card-image {
+    width: 100% ;
+    height: 300px;
+    max-width: 300px;
+    object-fit: cover;
+    border-radius: 8px;    
+  }
+
+  .card-text {
+    padding: 15px;
+    text-align: center;
+  }
+  .card-text h3 {
+    font-size: 1rem;
+  }
+
+  .card-text p {
+    font-size: 70%;
+    text-align: justify;
+  }
+}
