@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Impact, sans-serif;
+  }
+
+  :root {
+    --cortexto: #ffffff;
+    --corfundo: linear-gradient(45deg, #490449, #11000d);
+    ;
+    --corprimaria: #e60f00;
+    --cabecalho: #401083;
+    --sombra: 0 2px 4px rgba(63, 9, 126, 0.322)
+  }
+
+
+
+  header {
+    background-color: var(--cabecalho);
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    box-shadow: var(--sombra);
+  }
+
+  p {
+    text-indent: 40px;
+  }
+
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu a {
+    text-decoration: none;
+    color: var(--cortexto);
+    margin-left: 2rem;
+    transition: color 0.3s;
+  }
+
+  .menu a:hover {
+    color: var(--corprimaria);
+  }
+
+  .cards {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    background: var(--corfundo);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--sombra);
+    width: 300px;
+    transition: transform 0.3s;
+    color: var(--cortexto)
+  }
+
+  .v{
+    width: 600px;
+  }
+
+  .card h1 {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    color: var(--corprimaria);
+  }
+
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+
+  .card h3 {
+    color: var(--corprimaria);
+    margin-bottom: 1rem;
+  }
+
+  .rig {
+    text-align: left;
+  }
+
+  footer {
+    background-color: var(--cabecalho);
+    text-align: center;
+    color: var(--cortexto);
+    padding: 2rem;
+    margin-top: 4rem;
+    box-shadow: var(--sombra);
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 6rem auto 2rem;
+    padding: 0 1rem;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 4rem 0;
+    background: var(--corfundo);
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--corprimaria);
+
+    box-shadow: var(--sombra);
+  }
+
+  .hero p {
+    color: var(--cortexto);
+  }
+
+  .Contorno {
+    font: impact;
+    color: white;
+    text-shadow:
+      -1px -1px 0 #ffffff,
+      1px -1px 0 #ffffff,
+      -1px 1px 0 #ffffff,
+      1px 1px 0px #ffffff,
+      -2px 0 0 #ffffff,
+      2px 0 0 #ffffff,
+      0 2px 0 #ffffff,
+      0 -2px 0 #ffffff;
+  }
+
+  @media (max-width: 520px) {
+    .menu {
+      display: none;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .card {
+      width: 100%;
+    }
+  }
